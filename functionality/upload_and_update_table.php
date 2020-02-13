@@ -1,6 +1,6 @@
 <?php
 
-    // 09/02/2019 must tidy up this and classify the .php file
+    // :: 13/02/2020 :: bit of a messy class, may need a clean at some stage (to improve maintainability)
 	$arr_file_types = ['application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'];
 	require '../vendor/autoload.php';
 
@@ -83,6 +83,6 @@
 	}
 
 	move_uploaded_file($_FILES['file']['tmp_name'], '../uploads/' . $_FILES['file']['name']);
-	echo "File uploaded successfully... converting commenced. You may safely leave the page.";
+	echo "File uploaded successfully. You may safely leave the page.";
 
     convert_excel_to_sqlite();

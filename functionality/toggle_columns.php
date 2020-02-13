@@ -20,8 +20,7 @@
 			$query = ($is_active === true ? "INSERT INTO Excluded_Columns (Name) VALUES ('$clicked_column')" : "DELETE FROM Excluded_Columns WHERE Name = ('$clicked_column')");
 			$stmt = $this->database->prepare($query);
 			$stmt->execute();
-			
-			// removed :: 02/02/2020 // added back 09/02/2020 // remove when you getify this post
+
 			header("location:admin.php");
 		}
 

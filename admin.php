@@ -28,7 +28,7 @@
 		
 <?php
 
-	// password change -> add to login_func?
+    // :: password change
 	if (isset($_POST['request']) && $_POST['request'] == "Change") 
 	{
 		$dbh = new PDO('sqlite:db/EAMs.db');
@@ -48,11 +48,9 @@
 		}
 		
 		echo ($result['password'] == old_password ? '' : '<div class="align-center"><h2>wrong password</h2></div>');
-	}	
+	}
 
-
-
-	// toggle columns
+	// :: toggle columns
 	require_once('functionality/toggle_columns.php');
 	$database = new PDO('sqlite:db/EAMs.db');
 	$column_toggle = new toggle_columns($database);
@@ -65,9 +63,8 @@
 
 ?>
 
-        <!-- somewhat complete -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<!--https://artisansweb.net/drag-drop-file-upload-using-javascript-php/--->
+		<!-- Credit & Reference: https://artisansweb.net/drag-drop-file-upload-using-javascript-php/ --->
 		
 		<div class = "align-center">
 			<div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">

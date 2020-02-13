@@ -1,0 +1,187 @@
+html body {
+	font-family: verdana; 
+	min-width: 1299px;
+	font-weight: 300;
+}
+
+.logo-area{
+	margin-top: 1.5vw;
+	width: auto;
+	text-align: center;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-area img {
+	margin-right: 6vw;
+}
+
+.link-box {
+	width: 215px;
+	display: flex;
+    flex-wrap: wrap;
+	box-shadow: 0px 2px 12px 6px rgba(0, 0, 0, 0.05);
+	border: 2px solid #057cc4;
+	overflow: hidden;
+}
+	
+.link-box a { 
+	height: 48px;
+	width: 100%;
+	background-color: #ffffff; 
+	color: #057cc4;
+	font: 100 21px verdana;
+	text-decoration: none;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.link-box a:hover {
+	color: #ffffff;
+	background-color: #057cc4;
+}
+
+.align-center {
+	display: flex;
+	justify-content: center;
+}
+
+.table-navigation {
+	width: 950px;
+	margin-top: 2vw;
+	margin-bottom: 30px;
+	border-left: 2px solid #057cc4;
+	border-right: 2px solid #057cc4;
+	border-top: 2px solid #057cc4;
+}
+
+.search-bar {
+	display: flex;
+	flex-wrap: wrap;
+	height: 50px;
+	overflow: hidden; 
+}
+
+.search-box {
+	height: 100%;
+	width: 675px;
+	border: none;
+	text-align: center;
+	color: #057cc4;
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.search-button {
+	height: 100%;
+	width: 275px;
+	color: #ffffff;
+	background-color: #057cc4;
+	font-size: 22px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search-button:hover {
+	color: #057cc4;
+	background-color: #ffffff;
+	cursor: pointer;
+	border-left: 2px solid #057cc4;
+}
+
+.pagination {
+	height: 50px;		
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: #057cc4;
+}
+	
+.pagination a {
+	height: 100%;
+	width: 68.75px;
+	color: #ffffff;
+	font-size: 18px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagination a:hover {
+	color: #057cc4;
+	border-radius: 15px;
+	box-sizing: border-box;
+	border: 2px solid #057cc4;
+	border-bottom: 3.5px solid #057cc4;
+	background-color: #ffffff;
+}
+
+.pagination p {
+	height: 50px;
+	width: 675px;
+	color: #ffffff;
+	
+	font-size: 18px;
+	line-height: 7px;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	display: flex;
+}
+
+table {
+	margin-top: 30px;
+	margin-bottom: 50px;
+	width: 87.5vw;
+	min-width: 1299px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0px 2px 12px 6px rgba(0, 0, 0, 0.1);
+	font-size: 12px;
+}
+
+table th {
+	color: #ffffff;
+	font-size: 15.5px;
+	position: static;
+	background-color: #057cc4;
+}
+
+table th, td {
+	padding: 14px;
+	text-align: center;
+}
+
+table tbody tr:hover {
+	background-color: #def2ff;
+	/*box-shadow: 0 0 20px rgba(5, 124, 196, 0.3); doesn't work IE, sadly*/
+}
+
+table td:hover {
+	color: #ffffff;
+	background-color: #057cc4;	
+}
+
+table tbody td {
+	position: relative;
+}
+
+table tbody td:hover:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: #def2ff;
+	z-index: -1;
+	/*box-shadow: 0 0 20px rgba(5, 124, 196, 0.3); doesn't work IE, sadly*/
+}

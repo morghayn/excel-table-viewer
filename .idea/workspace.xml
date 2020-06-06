@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25fbb134-3b7b-488b-a3e0-57e25df70b01" name="Default Changelist" comment="" />
+    <list default="true" id="25fbb134-3b7b-488b-a3e0-57e25df70b01" name="Default Changelist" comment="Bug Patch: Apostrophes. &#10;&#10;Excel documents containing apostrophes in any cell would result in the INSERT query within upload_and_update_table functionality file.&#10;&#10;This has now been patched, two further issues have been identified:&#10;1) It's limited to insertion speeds of approximately 50-200 records a second.&#10;2) If (for a massive file) the insertion time takes longer than 120 seconds, it will result in a cut off and an error being thrown.&#10;&#10;I will suggest that an improvement to be made and the identified bugs to be ironed out.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/EAMs.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/EAMs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functionality/upload_and_update_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/functionality/upload_and_update_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +16,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,45 +99,28 @@
       <workItem from="1581277956594" duration="1165000" />
       <workItem from="1581537987921" duration="6739000" />
       <workItem from="1581612541854" duration="555000" />
+      <workItem from="1581613135601" duration="22000" />
+      <workItem from="1591093824216" duration="3140000" />
+      <workItem from="1591287786126" duration="1293000" />
+      <workItem from="1591449821096" duration="15683000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bug Patch: Apostrophes. &#10;&#10;Excel documents containing apostrophes in any cell would result in the INSERT query within upload_and_update_table functionality file.&#10;&#10;This has now been patched, two further issues have been identified:&#10;1) It's limited to insertion speeds of approximately 50-200 records a second.&#10;2) If (for a massive file) the insertion time takes longer than 120 seconds, it will result in a cut off and an error being thrown.&#10;&#10;I will suggest that an improvement to be made and the identified bugs to be ironed out." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Patch: Apostrophes. &#10;&#10;Excel documents containing apostrophes in any cell would result in the INSERT query within upload_and_update_table functionality file.&#10;&#10;This has now been patched, two further issues have been identified:&#10;1) It's limited to insertion speeds of approximately 50-200 records a second.&#10;2) If (for a massive file) the insertion time takes longer than 120 seconds, it will result in a cut off and an error being thrown.&#10;&#10;I will suggest that an improvement to be made and the identified bugs to be ironed out." />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="0" key="#PHP" timestamp="1580530912869">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="390" y="0" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1580530912869" />
-    <state x="275" y="23" key="#SQL_Dialects" timestamp="1580661228601">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="23" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1580661228601" />
-    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1581276840801">
+    <state x="585" y="115" width="1152" height="810" key="CommitChangelistDialog2" timestamp="1591468197063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581276840801" />
-    <state x="184" y="7" key="SettingsEditor" timestamp="1580531139462">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580531139462" />
-    <state x="540" y="269" key="com.intellij.ide.util.TipDialog" timestamp="1581612546125">
+    <state x="585" y="115" width="1152" height="810" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591468197063" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591449823302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580661026564" />
-    <state x="540" y="269" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581612546125" />
-    <state x="65" y="0" width="981" height="474" maximized="true" key="dock-window-1" timestamp="1580531184482">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="65" y="0" width="981" height="474" maximized="true" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1580531184482" />
-    <state x="629" y="119" width="661" height="801" key="find.popup" timestamp="1581541972710">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="629" y="119" width="661" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581541972710" />
-    <state x="682" y="432" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1581276637274">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="682" y="432" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581276637274" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591449823302" />
   </component>
 </project>

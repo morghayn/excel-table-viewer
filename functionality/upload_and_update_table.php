@@ -21,7 +21,6 @@ function convert_excel_to_sqlite()
     $insert_table_query = "INSERT INTO EAMS ("; // the insert script
 
     $highest_column = $worksheet->getHighestColumn();
-    $highest_row = $worksheet->getHighestRow();
 
     /**
      * First Row
@@ -44,33 +43,25 @@ function convert_excel_to_sqlite()
     $database->exec($create_table_query); // creating table
     $insert_table_query .= $values;
 
-    $i = 1;
+    $stmt = $database->prepare($insert_table_query);
     foreach($worksheet->getRowIterator(2) as $row)
     {
-        $stmt = $database->prepare($insert_table_query);
-        $unparsed_cells = $row->getCellIterator();
-        $unparsed_cells->setIterateOnlyExistingCells(FALSE);
-        foreach ($unparsed_cells as $cell)
-        {
-            $stmt->bindValue($i, $cell->getValue());
-            $i++;
-        }
-        $stmt->execute();
-        $i = 1;
+        $excel_range = 'A'.$row->getRowIndex().':'.$highest_column.$row->getRowIndex();
+        $row_as_array = $worksheet->rangeToArray($excel_range, null, true, true, false);
+        $stmt->execute($row_as_array[0]);
     }
 
     /**
      * Inserting data...?
      */
-    //$database->exec($insert_table_query);
-    $database->exec("DROP TABLE Excluded_Columns");
+    $database->exec("DROP TABLE IF EXISTS Excluded_Columns");
     $database->exec("CREATE TABLE IF NOT EXISTS Excluded_Columns (rowID INTEGER PRIMARY KEY, Name TEXT)");
     $database->exec("INSERT INTO Excluded_Columns (Name) VALUES ('rowID')");
 }
 
 if (!(in_array($_FILES['file']['type'], $arr_file_types)))
 {
-    echo "false";
+    echo "Error uploading file. Ensure file is an Excel document.";
     return;
 }
 

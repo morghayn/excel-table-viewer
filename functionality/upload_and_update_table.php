@@ -25,12 +25,8 @@ function convert_excel_to_sqlite()
     /**
      * First Row
      */
-    $first_row = $worksheet->getRowIterator(1)->current();
-    $unparsed_cells = $first_row->getCellIterator();
-    $unparsed_cells->setIterateOnlyExistingCells(FALSE);
-
     $values = "VALUES (";
-    foreach ($unparsed_cells as $cell)
+    foreach ($worksheet->getRowIterator(1)->current()->getCellIterator() as $cell)
     {
         $create_table_query .= "'" . $cell->getValue() . "'" . ($cell->getColumn() != $highest_column ? " TEXT, " : " TEXT)");
         $insert_table_query .= "'" . $cell->getValue() . "'" . ($cell->getColumn() != $highest_column ? ", " : ") ");
@@ -46,8 +42,8 @@ function convert_excel_to_sqlite()
     $stmt = $database->prepare($insert_table_query);
     foreach($worksheet->getRowIterator(2) as $row)
     {
-        $excel_range = 'A'.$row->getRowIndex().':'.$highest_column.$row->getRowIndex();
-        $row_as_array = $worksheet->rangeToArray($excel_range, null, true, true, false);
+        $pRange = 'A'.$row->getRowIndex().':'.$highest_column.$row->getRowIndex();
+        $row_as_array = $worksheet->rangeToArray($pRange, null, false, false, false);
         $stmt->execute($row_as_array[0]);
     }
 

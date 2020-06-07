@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25fbb134-3b7b-488b-a3e0-57e25df70b01" name="Default Changelist" comment="Bug Patch: Apostrophes. &#10;&#10;Excel documents containing apostrophes in any cell would result in the INSERT query within upload_and_update_table functionality file.&#10;&#10;This has now been patched, two further issues have been identified:&#10;1) It's limited to insertion speeds of approximately 50-200 records a second.&#10;2) If (for a massive file) the insertion time takes longer than 120 seconds, it will result in a cut off and an error being thrown.&#10;&#10;I will suggest that an improvement to be made and the identified bugs to be ironed out.">
+    <list default="true" id="25fbb134-3b7b-488b-a3e0-57e25df70b01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/EAMs.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/EAMs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functionality/upload_and_update_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/functionality/upload_and_update_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/EAMS.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/EAMS.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
       <workItem from="1591093824216" duration="3140000" />
       <workItem from="1591287786126" duration="1293000" />
       <workItem from="1591449821096" duration="15964000" />
-      <workItem from="1591539770484" duration="2393000" />
+      <workItem from="1591539770484" duration="3919000" />
     </task>
     <task id="LOCAL-00001" summary="Bug Patch: Apostrophes. &#10;&#10;Excel documents containing apostrophes in any cell would result in the INSERT query within upload_and_update_table functionality file.&#10;&#10;This has now been patched, two further issues have been identified:&#10;1) It's limited to insertion speeds of approximately 50-200 records a second.&#10;2) If (for a massive file) the insertion time takes longer than 120 seconds, it will result in a cut off and an error being thrown.&#10;&#10;I will suggest that an improvement to be made and the identified bugs to be ironed out.">
       <created>1591468236272</created>
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591468236272</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Code clean up and slight improvements.&#10;&#10;Identified issues have no been addressed with this commit.">
+      <created>1591542486927</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591542486927</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,17 +127,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bug Patch: Apostrophes. &#10;&#10;Excel documents containing apostrophes in any cell would result in the INSERT query within upload_and_update_table functionality file.&#10;&#10;This has now been patched, two further issues have been identified:&#10;1) It's limited to insertion speeds of approximately 50-200 records a second.&#10;2) If (for a massive file) the insertion time takes longer than 120 seconds, it will result in a cut off and an error being thrown.&#10;&#10;I will suggest that an improvement to be made and the identified bugs to be ironed out." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug Patch: Apostrophes. &#10;&#10;Excel documents containing apostrophes in any cell would result in the INSERT query within upload_and_update_table functionality file.&#10;&#10;This has now been patched, two further issues have been identified:&#10;1) It's limited to insertion speeds of approximately 50-200 records a second.&#10;2) If (for a massive file) the insertion time takes longer than 120 seconds, it will result in a cut off and an error being thrown.&#10;&#10;I will suggest that an improvement to be made and the identified bugs to be ironed out." />
+    <MESSAGE value="Code clean up and slight improvements.&#10;&#10;Identified issues have no been addressed with this commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Code clean up and slight improvements.&#10;&#10;Identified issues have no been addressed with this commit." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="115" width="1152" height="810" key="CommitChangelistDialog2" timestamp="1591542408153">
+    <state x="585" y="115" width="1152" height="810" key="CommitChangelistDialog2" timestamp="1591542486126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" width="1152" height="810" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591542408153" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1591468238372">
+    <state x="585" y="115" width="1152" height="810" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591542486126" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1591542491293">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591468238372" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591542491293" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591539788713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

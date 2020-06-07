@@ -43,8 +43,8 @@ function convert_excel_to_sqlite()
     foreach($worksheet->getRowIterator(2) as $row)
     {
         $pRange = 'A'.$row->getRowIndex().':'.$highest_column.$row->getRowIndex();
-        $row_as_array = $worksheet->rangeToArray($pRange, null, false, false, false);
-        $stmt->execute($row_as_array[0]);
+        $rowAsArray = $worksheet->rangeToArray($pRange, null, false, false, false);
+        $stmt->execute($rowAsArray[0]);
     }
 
     /**
